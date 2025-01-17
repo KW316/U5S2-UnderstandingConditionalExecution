@@ -5,7 +5,11 @@ public class Ternary {
     public static String ternary(){
         String response = "";
         /* Put your code here */
-
+        int x = 20;
+        int y = (x == 1) ? (5):(90);
+        System.out.println("value of y is: " + y);
+        y = (x == 20) ? (61):(34);
+        System.out.println("value of y is: " + y);
 
 
         return response;

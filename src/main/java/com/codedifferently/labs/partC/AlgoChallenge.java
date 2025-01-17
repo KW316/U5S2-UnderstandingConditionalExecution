@@ -1,6 +1,16 @@
 package com.codedifferently.labs.partC;
 
 public class AlgoChallenge {
+
+    public static void main(String[] args) {
+        System.out.println(containE("Hello"));
+        System.out.println(containE("Heeello"));
+        System.out.println(containE("Heello"));
+        System.out.println(everyOther("Kianna", 2));
+        System.out.println(everyOther("Miracle", 2));
+        System.out.println(everyOther("abcdefg", 2));
+        System.out.println(everyOther("abcdefg", 3));
+    }
      /* Problem 1
     Determine if the given string contains between 1 and 3 'e' characters.
     Only if the string contains between 1 and 3 'e' characters; return true.
@@ -10,8 +20,21 @@ public class AlgoChallenge {
      */
 
     public static Boolean containE(String str) {
+        int x = 0;
+        String[] arr = str.split("");
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i].equalsIgnoreCase("e")){
+                x++;
+            }else{
 
-        return null;
+            }
+        }
+        if(x == 1 || x == 3){
+            return true;
+        }else{
+            return false;
+        }
+
     }
 
      /* Problem 2
@@ -30,8 +53,15 @@ public class AlgoChallenge {
      */
 
     public static String everyOther(String str, int n) {
+        int x = n;
+        String[] arr = str.split("");
+        String a = arr[0];
+        for( x = n; x < arr.length; x = x + n){
+                a = a+arr[x];
+            }
 
-        return null;
+
+        return a;
     }
 
 
